@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_Ke3VMOxBEeWtZZZu6SMYiQ">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_SZ9jgOxBEeWtZZZu6SMYiQ" featurename="commands" parentElementId="xpath:/">
+    <elements xsi:type="commands:Command" xmi:id="_Nk4OcOxCEeWtZZZu6SMYiQ" elementId="com.tad.school.genhtml.ui.command.generatehtml" commandName="Generate HTML" description="Generate HTML"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_YWEVkOxBEeWtZZZu6SMYiQ" featurename="handlers" parentElementId="xpath:/">
+    <elements xsi:type="commands:Handler" xmi:id="_SW6aEOxCEeWtZZZu6SMYiQ" elementId="com.tad.school.genhtml.ui.handler.0" contributionURI="bundleclass://com.tad.school.genhtml.ui/com.tad.school.genhtml.ui.handlers.GenerateHTMLHandler" command="_Nk4OcOxCEeWtZZZu6SMYiQ"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_aPnRIOxBEeWtZZZu6SMYiQ" featurename="menuContributions" parentElementId="xpath:/">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_TbXOwOxEEeWtZZZu6SMYiQ" elementId="com.tad.school.genhtml.ui.menucontribution.0" parentId="com.tad.school.presentation.SchoolEditorID">
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_pmbiwOxEEeWtZZZu6SMYiQ" elementId="com.tad.school.genhtml.ui.command.generatehtml.menu" label="Generate HTML" tooltip="Generate HTML" command="_Nk4OcOxCEeWtZZZu6SMYiQ">
+        <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_ztxe0OxHEeWtZZZu6SMYiQ" coreExpressionId="com.tad.school.genhtml.ui.definition"/>
+      </children>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.tad.school/src-gen" modelPluginID="com.tad.school"
+    templateDirectory="/com.tad.school/templates" dynamicTemplates="true" modelName="School"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" interfaceNamePattern="M{0}" classNamePattern="M{0}Impl"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>School.ecore</foreignModel>
+  <genPackages prefix="School" basePackage="com.tad" disposableProviderFactory="true"
+      ecorePackage="School.ecore#/">
+    <genClasses ecoreClass="School.ecore#//Academy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference School.ecore#//Academy/teachers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference School.ecore#//Academy/students"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference School.ecore#//Academy/schools"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute School.ecore#//Academy/name"/>
+    </genClasses>
+    <genClasses ecoreClass="School.ecore#//School">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference School.ecore#//School/rooms"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference School.ecore#//School/teachers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference School.ecore#//School/students"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute School.ecore#//School/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute School.ecore#//School/rank"/>
+    </genClasses>
+    <genClasses ecoreClass="School.ecore#//Teacher">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute School.ecore#//Teacher/name"/>
+      <genOperations ecoreOperation="School.ecore#//Teacher/evaluate">
+        <genParameters ecoreParameter="School.ecore#//Teacher/evaluate/student"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="School.ecore#//ClassRoom">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute School.ecore#//ClassRoom/number"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference School.ecore#//ClassRoom/teacher"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference School.ecore#//ClassRoom/children"/>
+    </genClasses>
+    <genClasses ecoreClass="School.ecore#//Student">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute School.ecore#//Student/name"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EAttribute School.ecore#//Student/age"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference School.ecore#//Student/notations"/>
+    </genClasses>
+    <genClasses ecoreClass="School.ecore#//Matter"/>
+    <genClasses ecoreClass="School.ecore#//Math"/>
+    <genClasses ecoreClass="School.ecore#//Notation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute School.ecore#//Notation/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

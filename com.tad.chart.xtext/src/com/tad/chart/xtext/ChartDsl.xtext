@@ -1,0 +1,28 @@
+grammar com.tad.chart.xtext.ChartDsl with org.eclipse.xtext.common.Terminals
+
+generate chartDsl "http://www.tad.com/chart/xtext/ChartDsl"
+
+Company:
+	'Company' name=ID '{'
+		employees+=Employee*
+		projects+=Project*
+	'}'
+;
+	
+Employee:
+	'employee' name=ID ('weigth' INT)? ('heigth' INT)?
+;
+	
+Project:
+	'Project' name=ID 'type' projectType=ProjectType '{'
+		tasks+=Task* 
+	'}'
+;
+
+Task :
+	'Task' name=ID 'responsable' responsable=[Employee]
+;
+
+enum ProjectType:
+	Development='Development'|Regie='Regie'
+;
